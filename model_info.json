@@ -1,0 +1,94 @@
+{
+  "model_type": "Random Forest Regressor",
+  "mae": 7.478993849560026,
+  "cv_mae": 9.024970438102203,
+  "features": [
+    "prev_weight",
+    "days_rest",
+    "prev_rpe_filled",
+    "prev_volume",
+    "session_number",
+    "exercise_encoded"
+  ],
+  "feature_importance": {
+    "prev_weight": 0.468095190023282,
+    "prev_volume": 0.2434233131587699,
+    "exercise_encoded": 0.09082474486937842,
+    "session_number": 0.07230926939183963,
+    "days_rest": 0.06738199263214782,
+    "prev_rpe_filled": 0.057965489924582295
+  },
+  "target": "next_weight",
+  "training_samples": 255,
+  "exercises": [
+    "Chest Press (Machine)",
+    "Lat Pulldown (Cable)",
+    "Leg Extension (Machine)",
+    "Lying Leg Curl (Machine)",
+    "Pec Deck (Machine)",
+    "Preacher Curl (Machine)",
+    "Seated Leg Curl (Machine)",
+    "Seated Row (Cable)"
+  ],
+  "exercise_encoding": {
+    "Chest Press (Machine)": 0,
+    "Lat Pulldown (Cable)": 1,
+    "Leg Extension (Machine)": 2,
+    "Lying Leg Curl (Machine)": 3,
+    "Pec Deck (Machine)": 4,
+    "Preacher Curl (Machine)": 5,
+    "Seated Leg Curl (Machine)": 6,
+    "Seated Row (Cable)": 7
+  },
+  "model_class": "RandomForestRegressor",
+  "exercise_performance": {
+    "Chest Press (Machine)": {
+      "samples": 7.0,
+      "mae": 4.93,
+      "mean_actual": 62.14,
+      "mean_predicted": 61.21
+    },
+    "Lat Pulldown (Cable)": {
+      "samples": 8.0,
+      "mae": 9.25,
+      "mean_actual": 63.84,
+      "mean_predicted": 64.04
+    },
+    "Leg Extension (Machine)": {
+      "samples": 7.0,
+      "mae": 11.63,
+      "mean_actual": 71.07,
+      "mean_predicted": 67.09
+    },
+    "Lying Leg Curl (Machine)": {
+      "samples": 5.0,
+      "mae": 5.19,
+      "mean_actual": 40.4,
+      "mean_predicted": 38.52
+    },
+    "Pec Deck (Machine)": {
+      "samples": 4.0,
+      "mae": 2.69,
+      "mean_actual": 51.75,
+      "mean_predicted": 50.56
+    },
+    "Preacher Curl (Machine)": {
+      "samples": 7.0,
+      "mae": 7.09,
+      "mean_actual": 31.43,
+      "mean_predicted": 35.67
+    },
+    "Seated Leg Curl (Machine)": {
+      "samples": 5.0,
+      "mae": 6.99,
+      "mean_actual": 42.8,
+      "mean_predicted": 43.27
+    },
+    "Seated Row (Cable)": {
+      "samples": 8.0,
+      "mae": 8.78,
+      "mean_actual": 62.1,
+      "mean_predicted": 60.57
+    }
+  }
+}
