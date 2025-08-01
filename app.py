@@ -12,7 +12,7 @@ warnings.filterwarnings('ignore', message='X does not have valid feature names')
 
 # Page configuration
 st.set_page_config(
-    page_title="AI Workout Progression Predictor",
+    page_title="Workout Progression Predictor",
     page_icon="🏋️",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -111,7 +111,7 @@ def get_progression_recommendation(current_weight, predicted_weight):
 
 def main():
     # Header
-    st.markdown('<h1 class="main-header">🏋️ AI Workout Progression Predictor</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">🏋 Workout Progression Predictor</h1>', unsafe_allow_html=True)
     
     # Load model
     model, label_encoder, model_info = load_model_and_info()
@@ -121,10 +121,8 @@ def main():
     
     # Model accuracy disclaimer
     st.warning("""
-    ⚠️ **Model Accuracy Notice**: This AI has an average prediction error of ±7.5kg. 
-    Use predictions as guidance only and always listen to your body. Great for learning 
-    AI concepts with real workout data!
-    """)
+    ⚠️ **Model Accuracy Notice**: This model has an average prediction error of ±7.5kg. 
+    Use predictions as guidance only and always listen to your body.""")
     
     # Sidebar for model info
     with st.sidebar:
@@ -139,7 +137,7 @@ def main():
         st.write("""
         1. Select your exercise type
         2. Input your last session data
-        3. AI analyzes your patterns
+        3. Model analyzes your patterns
         4. Get personalized weight recommendation
         5. Track your actual results
         """)
@@ -166,7 +164,7 @@ def main():
         selected_exercise = st.selectbox(
             "Select Exercise",
             options=available_exercises,
-            help="Choose from exercises the AI was trained on"
+            help="Choose from exercises the model was trained on"
         )
         
         # Show exercise-specific performance if available
@@ -233,7 +231,7 @@ def main():
         """)
     
     # Prediction button
-    if st.button("🎯 Get AI Prediction", type="primary"):
+    if st.button("🎯 Get Prediction", type="primary"):
         
         # Make prediction
         predicted_weight = predict_next_weight(
@@ -277,7 +275,7 @@ def main():
             st.markdown(f'<div class="prediction-box"><h3>{recommendation}</h3></div>', unsafe_allow_html=True)
         
         # Exercise-specific insights
-        st.subheader("🧠 AI Insights")
+        st.subheader("🧠 Insights")
         
         insights = []
         
@@ -376,7 +374,7 @@ def main():
     # About section
     with st.expander("ℹ️ About This App"):
         st.write("""
-        This AI-powered workout progression predictor was trained on personal workout data 
+        This workout progression predictor model was trained on personal workout data 
         from Strong app exports. It uses machine learning to analyze individual patterns 
         and recommend optimal weights for your next training session.
         
