@@ -44,7 +44,7 @@ Raw Strong App Data → Cleaning & Feature Engineering → Session Aggregation �
 
 ## 🚀 Live Demo
 
-**Try the app**: [(https://workout-progression-predictor.streamlit.app/)](https://workout-progression-predictor2.streamlit.app/)]
+**Try the app**: [(https://workout-progression-predictor.streamlit.app/)](https://workout-progression-predictor2.streamlit.app/)
 
 ### Sample Prediction
 Input your last session data and get instant recommendations:
